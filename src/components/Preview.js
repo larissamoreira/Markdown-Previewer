@@ -8,6 +8,11 @@ export default class Preview extends React.Component {
   render() {
     const { text } = this.props;
     const textMarked = myMarked(text);
-    return <div dangerouslySetInnerHTML={this.createMarkup(textMarked)} />;
+    return (
+      <div
+        id="preview"
+        dangerouslySetInnerHTML={this.createMarkup(textMarked)}
+      />
+    );
   }
 }

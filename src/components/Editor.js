@@ -15,6 +15,23 @@ export default class Editor extends React.Component {
     });
   };
 
+  componentDidMount() {
+    const defaultText =
+      " # H1\n" +
+      "## H2\n" +
+      "[here is a link](https://www.google.com)\n" +
+      "`back-ticks around`\n" +
+      "``` print('codeblock') ```\n" +
+      "1. First ordered list item\n" +
+      "> Block Quotes!\n" +
+      "![React Logo w/ Text](https://goo.gl/Umyytc)" +
+      "**bolded text**";
+
+    this.setState({
+      input: defaultText
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
